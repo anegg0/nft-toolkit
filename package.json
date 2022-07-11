@@ -1,0 +1,27 @@
+{
+  "name": "toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Palm-Network/toolkit.git"
+  },
+  "keywords": [
+    "palm",
+    "nft",
+    "network",
+    "hardhat",
+    "training",
+    "toolkit"
+  ],
+  "author": "Gael Blanchemain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Palm-Network/toolkit/issues"
+  },
+  "homepage": "https://github.com/Palm-Network/toolkit#readme"
+}
