@@ -13,10 +13,6 @@ contract NFT is ERC721, ERC721URIStorage, Ownable {
 
     constructor() ERC721("NFT", "NFT") {}
 
-    function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://bafkreidfqka7zzb5ohrk7fzkymdt3bz4uklsql5nj3bziqx5li5lbrzha4";
-    }
-
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
