@@ -2,10 +2,8 @@ import { task, types } from "hardhat/config";
 import { Contract } from "ethers";
 import { TransactionResponse } from "@ethersproject/abstract-provider";
 import { getContract } from "./contract";
-import * as dotenv from "dotenv";
-dotenv.config();
 
-let deployer: any = process.env.PUBLIC_KEY;
+let deployer: any = "0x25c074d5F80840bE51aF84B6AA9179540562AC5b";
 task("mint-nft", "Mint an ERC721 NFT")
   .addParam("tokenUri", "Your ERC721 Token URI", undefined, types.string)
   .setAction(async (tokenUri, hre) => {
