@@ -2,6 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import { utils } from "ethers";
 import * as dotenv from "dotenv";
+import("./scripts/mint");
 dotenv.config();
 const privateKey = process.env.PRIVATE_KEY;
 const config: HardhatUserConfig = {
