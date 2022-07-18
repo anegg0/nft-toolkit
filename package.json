@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "npx hardhat run scripts/deploy.ts",
-    "mint": "npx hardhat mint-nft --token-uri \"uri\""
+    "deploy": "npx hardhat deploy --network \"network-name\"",
+    "mint": "npx hardhat mint-nft --token-uri \"uri\"",
+    "sourcify": "npx hardhat sourcify --network \"network-name\""
   },
   "repository": {
     "type": "git",
