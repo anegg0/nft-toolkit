@@ -1,9 +1,12 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "@nomiclabs/hardhat-ethers";
+import "hardhat-deploy";
 import { utils } from "ethers";
 import * as dotenv from "dotenv";
-import("./scripts/mint");
 dotenv.config();
+import("./scripts/mint");
+
 const privateKey = process.env.PRIVATE_KEY;
 const config: HardhatUserConfig = {
   solidity: "0.8.9",
