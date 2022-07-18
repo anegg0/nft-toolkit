@@ -1,13 +1,120 @@
-# Sample Hardhat Project
+# NFT toolkit: ERC721 with hardhat-deploy
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This repo helps you learn to deploy and mint NFTs on the Palm network using [`Hardhat-deploy`](https://github.com/wighawag/hardhat-deploy) and [`ethers.js`](https://docs.ethers.io)
 
-Try running some of the following tasks:
+## Features
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+1. **Requires minimal configuration**
+
+   Just set up your `.env` file.
+
+2. **Example ERC721**
+
+The included contract is barebone (for clarity) but functional.
+
+> :information_source: the contract is intended for training purpose, it hasn't been vetted for production, use at your own risk.
+
+3. **Example scripts for minting and testing**
+
+4. **Pre-configured for the Palm network**
+
+5. **Extra-functionalities thanks to [`Hardhat-deploy`](https://github.com/wighawag/hardhat-deploy)**
+   - `npx hardhat deploy` deploys only if your contract has changed
+   - `npx hardhat test` enable test fixtures for faster tests
+   - `npx hardhat sourcify` simplifies the process of contract verification with Sourcify.dev
+
+## Pre-requisites
+
+1. **[Node.js 16 LTS](https://nodejs.org/en/download/)**
+
+2. **An [INFURA account](https://infura.io/) (optional)**
+
+   - Sign in to INFURA.io
+   - Create a new Ethereum project
+   - Choose `PALM MAINNET` or `PALM TESTNET` as endpoint
+
+   This repo has been pre-configured to use INFURA as a convenience but you can choose any provider you wish.
+
+3. **Basic understanding of Ethereum/Solidity**
+
+4. **Basic understanding of Hardhat**
+
+   - Catch up with Hardhat here: [Hardhat documentation](https://hardhat.org/getting-started/)
+   - Since this repo relies heavily on `hardhat-deploy`, you might want to read [their README](https://github.com/wighawag/hardhat-deploy#readme), too.
+
+## Installation
+
+        ```bash
+        npm install
+        ```
+
+## Configuration
+
+Fill out your env values in `.example-env` then rename the file `.env`:
+
+| ENV Variable   | Description             |
+| -------------- | ----------------------- |
+| INFURA_API_KEY | your INFURA project ID. |
+| PRIVATE_KEY    | Your private key.       |
+
+## Usage
+
+#### Compile contract:
+
+        ```bash
+        npx hardhat compile
+        ```
+
+#### Deploy contract to Hardhat's dev network:
+
+Start Hardhat's localhost network:
+
+        ```bash
+        npx hardhat node
+        ```
+
+Deploy on localhost network:
+
+> :information_source: You can choose the network you want to interact with by using the `--network` suffix.
+
+        ```bash
+        npx hardhat deploy --network localhost
+        ```
+
+#### Deploy contract to Palm Testnet:
+
+        ```bash
+        npx hardhat deploy --network palm_testnet
+        ```
+
+#### Deploy contract to Palm Mainnet:
+
+        ```bash
+        npx hardhat deploy --network palm_mainnet
+        ```
+
+#### Mint an NFT on Palm Testnet:
+
+        ```bash
+        npx hardhat mint-nft --token-uri "the-URI-of-your-NFT" --network palm_testnet
+        ```
+
+#### Mint an NFT on Palm Mainnet:
+
+        ```bash
+        npx hardhat mint-nft --token-uri "the-URI-of-your-NFT" --network palm_mainnet
+        ```
+
+#### Run test(s):
+
+        ```bash
+        npx hardhat test
+        ```
+
+#### Verify a contract with sourcify.dev:
+
+        ```bash
+        npx  hardhat --network palm_testnet sourcify
+        ```
+
+_Credits to [Ronan Sandford](https://github.com/wighawag) for creating Hardhat-deploy._
