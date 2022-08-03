@@ -1,5 +1,5 @@
 {
-  "name": "toolkit",
+  "name": "minting-quickstart",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,20 +10,13 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Palm-Network/toolkit.git"
   },
-  "keywords": [
-    "palm",
-    "nft",
-    "network",
-    "hardhat",
-    "training",
-    "toolkit"
-  ],
+  "keywords": ["palm", "nft", "network", "hardhat", "training", "toolkit"],
   "author": "Gael Blanchemain",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Palm-Network/toolkit/issues"
+    "url": "https://github.com/Palm-Network/minting-quickstart/issues"
   },
-  "homepage": "https://github.com/Palm-Network/toolkit#readme",
+  "homepage": "https://github.com/Palm-Network/minting-quickstart#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "@openzeppelin/contracts": "^4.7.0",
