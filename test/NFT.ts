@@ -17,4 +17,16 @@ describe("NFT", function () {
 
         expect(await nft.owner()).to.equal(owner.address);
     });
+
+    it("Should mint succesfully if owner is the one minting", async function () {
+        const { nft, owner } = await loadFixture(deployFixture);
+        const tokenURI: any = "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu";
+        expect(await nft.safeMint(owner.address, tokenURI)).to.not.throw;
+    });
+
+    it("Should throw if owner is not the one minting", async function () {
+        const { nft, otherAccount } = await loadFixture(deployFixture);
+        const tokenURI: any = "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu";
+        expect(await nft.safeMint(otherAccount.address, tokenURI)).to.throw;
+    });
 });
