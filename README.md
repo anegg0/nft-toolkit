@@ -1,6 +1,6 @@
 # Minting Quickstart
 
-This project demonstrates a basic use case on how to deploy and mint an ERC721 token on the Palm Network using Hardhat-deploy. It comes with a sample contract, a test for that contract, and a script to mint that contract.
+This project demonstrates how to deploy and mint an ERC721 token on the Palm network using Hardhat. 
 
 ## Prerequisites
 
