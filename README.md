@@ -6,11 +6,6 @@ This project demonstrates how to deploy and mint an ERC721 token on the Palm net
 
 1. **[Node.js 16 LTS](https://nodejs.org/en/download/)**
 
-2. **An [INFURA account](https://infura.io/) (optional)**
-
-   - Sign in to INFURA.io
-   - Create a new Ethereum project
-   - Choose `PALM MAINNET` or `PALM TESTNET` as endpoint
 
 3. **Basic understanding of Ethereum/Solidity**
 
