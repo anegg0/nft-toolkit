@@ -11,7 +11,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Palm-Network/minting-quickstart.git"
   },
-  "keywords": ["palm", "nft", "network", "hardhat", "training", "toolkit"],
+  "keywords": [
+    "palm",
+    "nft",
+    "network",
+    "hardhat",
+    "training",
+    "toolkit"
+  ],
   "author": "Gael Blanchemain",
   "license": "MIT",
   "bugs": {
