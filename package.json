@@ -1,10 +1,11 @@
 {
-  "name": "toolkit",
+  "name": "minting-quickstart",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx hardhat test",
+    "test": "npm test",
+    "compile": "npm run compile",
     "deploy-local": "npx hardhat run --network localhost scripts/deploy.ts"
   },
   "repository": {
