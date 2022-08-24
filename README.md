@@ -1,13 +1,33 @@
-# Sample Hardhat Project
+# Minting Quickstart
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates how to deploy and mint an ERC721 token on the Palm network using Hardhat.
 
-Try running some of the following tasks:
+## Prerequisites
+
+1. **[Node.js 16 LTS](https://nodejs.org/en/download/)**
+
+2. **Basic understanding of Ethereum/Solidity**
+
+3. **Basic understanding of Hardhat**
+
+   - Catch up with Hardhat here: [Hardhat documentation](https://hardhat.org/getting-started/)
+
+## Install
+
+```bash
+npm install
+```
+
+## Usage
+
+### Compiling
 
 ```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+npm run compile
+```
+
+### Testing
+
+```shell
+npm test
 ```
