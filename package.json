@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx hardhat test",
-    "compile": "npx hardhat compile"
+    "test": "npm test",
+    "compile": "npm run compile"
   },
   "repository": {
     "type": "git",

@@ -23,11 +23,11 @@ npm install
 ### Compiling
 
 ```shell
-npx hardhat compile
+npm run compile
 ```
 
 ### Testing
 
 ```shell
-npx hardhat test
+npm test
 ```
