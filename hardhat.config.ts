@@ -3,8 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-ethers";
 import "hardhat-deploy";
 import { utils } from "ethers";
-import * as dotenv from "dotenv";
-dotenv.config();
+import 'dotenv/config';
 import("./scripts/mint");
 
 const privateKey = process.env.PRIVATE_KEY;
