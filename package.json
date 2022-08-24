@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm test",
     "compile": "npm run compile",
-    "deploy-local": "npx hardhat run --network localhost scripts/deploy.ts"
+    "deploy-local": "npm run deploy-local"
   },
   "repository": {
     "type": "git",
