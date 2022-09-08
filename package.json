@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "deploy": "npx hardhat deploy --network \"network-name\"",
     "mint": "npx hardhat mint-nft --token-uri \"uri\"",
@@ -13,14 +14,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Palm-Network/minting-quickstart.git"
   },
-  "keywords": [
-    "palm",
-    "nft",
-    "network",
-    "hardhat",
-    "training",
-    "toolkit"
-  ],
+  "keywords": ["palm", "nft", "network", "hardhat", "training", "toolkit"],
   "author": "Gael Blanchemain",
   "license": "MIT",
   "bugs": {
