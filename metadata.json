@@ -1,0 +1,23 @@
+{
+  "name": "Little Mu",
+  "description": "Impressive close-up of Mu, the mutant cat",
+  "image": "ipfs://bafkreiaaipxttcfgysk2to3k6pue6i5axftlvkgv3mz3ai4qdmknkejude",
+  "resources": [
+    {
+      "name": "Original Content",
+      "uri": "ipfs://bafkreig2xrfx7ei6nulb4rdoegt7apnzrgc2kxrubtd6vibex7x6o7n4oa",
+      "mime_type": "image/png",
+      "description": "Original Content/High Resolution"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "Incredibly Rare"
+    },
+    {
+      "trait_type": "Color",
+      "value": "Orange"
+    }
+  ]
+}

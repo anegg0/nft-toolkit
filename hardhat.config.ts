@@ -4,7 +4,7 @@ import "@nomiclabs/hardhat-ethers";
 import "hardhat-deploy";
 import { utils } from "ethers";
 import "dotenv/config";
-import("./scripts/mint");
+import "./scripts/mint";
 
 const privateKey = process.env.PRIVATE_KEY;
 const config: HardhatUserConfig = {
@@ -19,8 +19,7 @@ const config: HardhatUserConfig = {
       ],
     },
     palm_testnet: {
-      url:
-        `https://palm-testnet.infura.io/v3/${process.env.INFURA_API_KEY}` || "",
+      url: `https://palm-testnet.infura.io/v3/${process.env.INFURA_API_KEY}` || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined
           ? [`${process.env.PRIVATE_KEY}`]
