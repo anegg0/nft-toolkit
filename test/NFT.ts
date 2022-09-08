@@ -6,7 +6,6 @@ describe("NFT", function () {
 
     async function deployFixture() {
         const [owner, otherAccount] = await ethers.getSigners();
-
         const NFT = await ethers.getContractFactory("NFT");
         const nft = await NFT.deploy();
         return { nft, owner, otherAccount };
@@ -32,7 +31,6 @@ describe("NFT", function () {
         expect(tokenBalance).to.equal(1);
     });
 
-
     it("Should throw if owner is not the one minting", async function () {
         const { nft, otherAccount } = await loadFixture(deployFixture);
         const tokenURI = "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu";
@@ -42,5 +40,13 @@ describe("NFT", function () {
 
         const tokenBalance = await nft.balanceOf(otherAccount.address);
         expect(tokenBalance).to.equal(0);
+
+    it("Should mint an NFT with the right tokenURI", async function () {
+        const { nft, owner } = await loadFixture(deployFixture);
+        let tokenURI = "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu";
+        await nft.safeMint(owner.address, tokenURI);
+        expect(await nft.tokenURI(0)).to.equal(
+            "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu"
+        );
     });
 });

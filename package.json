@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "compile": "npm run compile",
-    "deploy-local": "npm run deploy-local"
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat deploy --network \"network-name\"",
+    "mint": "npx hardhat mint-nft --token-uri \"uri\"",
+    "sourcify": "npx hardhat sourcify --network \"network-name\""
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,11 @@
   "homepage": "https://github.com/Palm-Network/minting-quickstart#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
     "@openzeppelin/contracts": "^4.7.0",
-    "hardhat": "^2.10.0"
+    "dotenv": "^16.0.1",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.10.0",
+    "hardhat-deploy": "^0.11.11"
   }
 }
