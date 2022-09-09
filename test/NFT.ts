@@ -41,6 +41,8 @@ describe("NFT", function () {
         const tokenBalance = await nft.balanceOf(otherAccount.address);
         expect(tokenBalance).to.equal(0);
 
+    });
+
     it("Should mint an NFT with the right tokenURI", async function () {
         const { nft, owner } = await loadFixture(deployFixture);
         let tokenURI = "ipfs://bafkreihm63mue4z3qewc6nhj7ctzaediburwtu2ydr5iid26wgnilbnyhu";
