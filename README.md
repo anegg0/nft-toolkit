@@ -46,10 +46,15 @@ The included contract is barebone (for clarity) but functional.
 
 Fill out your env values in `.example-env` then rename the file `.env`:
 
-| ENV Variable   | Description             |
-| -------------- | ----------------------- |
-| INFURA_API_KEY | your INFURA project ID. |
-| PRIVATE_KEY    | Your private key.       |
+# network specific node uri : `"ETH_NODE_URI_" + networkName.toUpperCase()`
+ETH_NODE_URI_MAINNET=https://eth-mainnet.alchemyapi.io/v2/<apiKey>
+# generic node uri (if no specific found) :
+ETH_NODE_URI=https://{{networkName}}.infura.io/v3/<apiKey>
+
+# network specific mnemonic : `"MNEMONIC_ " + networkName.toUpperCase()`
+MNEMONIC_MAINNET=<mnemonic for mainnet>
+# generic mnemonic (if no specific found):
+MNEMONIC=<mnemonic>
 
 ## Usage
 
@@ -78,13 +83,13 @@ Deploy on localhost network:
 #### Deploy contract to mainnet:
 
         ```bash
-        npx hardhat deploy --network mainnet
+        npx hardhat deploy --network production
         ```
 
 #### Mint an NFT on Ethereum mainnet:
 
         ```bash
-        npx hardhat mint-nft --token-uri "the-URI-of-your-NFT" --network mainnet
+        npx hardhat mint-nft --token-uri "the-URI-of-your-NFT" --network production
         ```
 
 #### Run test(s):
