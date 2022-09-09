@@ -14,7 +14,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Palm-Network/minting-quickstart.git"
   },
-  "keywords": ["palm", "nft", "network", "hardhat", "training", "toolkit"],
+  "keywords": [
+    "palm",
+    "nft",
+    "network",
+    "hardhat",
+    "training",
+    "toolkit"
+  ],
   "author": "Gael Blanchemain",
   "license": "MIT",
   "bugs": {
@@ -27,6 +34,7 @@
     "@openzeppelin/contracts": "^4.7.0",
     "dotenv": "^16.0.1",
     "ethers": "^5.7.0",
+    "got": "^12.4.1",
     "hardhat": "^2.10.0",
     "hardhat-deploy": "^0.11.11"
   }
